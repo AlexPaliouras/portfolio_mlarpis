@@ -1,0 +1,152 @@
+\documentclass[10pt, a4paper, titlepage]{article}
+\usepackage{graphicx}
+\usepackage{setspace} 
+\usepackage{float}
+\usepackage{subcaption}
+\captionsetup[subfigure]{skip=2pt}
+\captionsetup[table]{
+  justification=raggedright,
+  singlelinecheck=false
+}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[]{hyperref}
+\hypersetup{
+    pdftitle={Week1\_Mlarpis\_LaTeX1},
+    pdfauthor={Alex Paliouras},
+}
+
+\title{Exercise Week 1: Working with LaTeX\\ \small Markup Languages and Reproducible Programming in Statistics}
+\author{Alex Paliouras 1263625}
+\date{\today}
+
+\onehalfspacing
+
+\begin{document}
+\begin{titlepage}
+\centering
+\onehalfspacing
+
+{\LARGE Exercise Week 1: Working with LaTeX\par}
+\vspace{0.4cm}
+
+{\large Markup Languages and Reproducible Programming
+in Statistics\par}
+\vspace{0.8cm}
+
+{\large Alex Paliouras 1263625\par}
+\vspace{0.3cm}
+
+{\large \today\par}
+\end{titlepage}
+\newpage
+
+\section{Equation: The Z Score}
+The chosen equation for this exercise is the Z score, a common method to express how many standard deviations an observed data value is above or below the mean effectively creating a standardized score.
+The formula for the Z-score consists of subtracting the population mean ($\mu$) from the raw score value ($x$) and dividing by the population standard deviation ($\sigma$):
+\begin{equation} 
+z = \frac{x - \mu}{\sigma}
+\end{equation}
+
+
+\subsection{Example Figures and Table}
+% To execute integrated R code and get LaTeX output when compiling, file needs to be R Sweave (.rnw) and to enable rnw files to be weaved using knitr (Tools > Global options > Sweave > Weave rnw files using: knitr) 
+
+<<echo=FALSE, message=FALSE, warning=FALSE>>=
+library(lattice)
+library(xtable)
+
+set.seed(123)
+data <- rnorm(1000)
+
+data.all <- cbind(
+  data = data,
+  squared1 = data^12 / data^10,
+  squared2 = data^2,
+  exponent = exp(data)
+)
+@
+
+\begin{figure}[H]
+\centering
+
+% First row with histogram and density plot and their subcaptions
+\begin{subfigure}[t]{0.45\textwidth}
+\centering
+<<echo=FALSE, fig.width=4, fig.height=3.5, out.width="\\linewidth">>=
+histogram(data, xlab = "",col="cyan")
+@
+\caption{Histogram}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.45\textwidth}
+\centering
+<<echo=FALSE, fig.width=4, fig.height=3.5, out.width="\\linewidth">>=
+densityplot(data^12 / data^10, xlab = "", col="dodgerblue")
+@
+\caption{Densityplot}
+\end{subfigure}
+
+\par\smallskip
+
+% Second row of stripplot and boxplot with their subcaptions
+\begin{subfigure}[t]{0.45\textwidth}
+\centering
+<<echo=FALSE, fig.width=4, fig.height=3.5, out.width="\\linewidth">>=
+stripplot(data^2, xlab = "", col="dodgerblue")
+@
+\caption{Stripplot}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.45\textwidth}
+\centering
+<<echo=FALSE, fig.width=4, fig.height=3.5, out.width="\\linewidth">>=
+bwplot(exp(data),  xlab = "")
+@
+\caption{Boxplot}
+\end{subfigure}
+
+\caption{Different plots of the same data, sometimes transformed.
+No particular objective other than it being an exercise.}
+\label{fig:plots}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{The same data, but now in a table. Only the first nine
+rows are displayed.}
+\label{tab:data_summary}
+
+%Print first 9 data rows of table using xtable command from xtable package
+<<echo=FALSE, results='asis'>>=
+print(
+  xtable(head(data.all, 9), digits=2),
+  include.rownames=TRUE,
+  floating=FALSE,
+  comment=FALSE
+)
+@
+\end{table}
+
+\section{Fairytale}
+\textbf{Title: The Enchanted Garden and the Magical Dove}
+
+Once, in a land covered by mists and whispers, there lay an enchanting garden hidden behind a great stone wall. No one knew who had built the wall or why, but one thing was for certain – nobody had ever seen what was behind it.
+
+A little boy named Peter lived in a village nearby. Fuelled by curiosity and tales of magical creatures, he often dreamt of the wonders that the walled garden might hold. One day, unable to resist its lure any longer, he decided to find a way in.
+
+As he approached the towering stone barrier, he noticed a tiny gap just big enough for him to peek through. The garden inside was bathed in a shimmering golden light, unlike any he had ever seen. To his amazement, in the center stood a magnificent tree with leaves that glittered as if they were made of starlight. And resting on one of its branches was a dove, glowing with the same luminous hue.
+
+Before he could process this beautiful sight, the dove spoke to his in a voice as soft as the wind, "To enter the garden, one must share a pure and selfless desire."
+
+Peter, with his heart pounding, whispered his wish, "I wish for everyone in my village to be happy and free from suffering."
+
+The massive stone door, seemingly of its own accord, began to open. The luminous dove flew to Peter and rested on his shoulder. "Your wish is genuine, and so you may enter," it said.
+
+Inside, the garden was more wondrous than Peter had ever imagined. Flowers sang in soft harmonies, and a gentle breeze carried the sweetest of fragrances. Every step he took made the grass shimmer with colors she'd never seen before.
+
+The dove explained that this was an Enchanted Garden, a place where one’s purest wishes could come true. But, there was a catch. To make his wish a reality, Peter had to plant a seed from the magical tree in his village and care for it with unwavering love and dedication.
+
+Peter accepted the challenge. With the seed safely tucked in his pocket and the dove guiding her, he returned to his village.
+
+Years went by, and with Peter's love, the seed grew into a magnificent tree, similar to the one in the Enchanted Garden. With its growth, joy and happiness blossomed in the village like never before.
+
+And so, in a village once shadowed by mystery, there stood a tree that bore witness to the pure heart of a boy and his luminous companion, reminding everyone that magic was always just a wish away.
+\end{document}
