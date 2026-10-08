@@ -1,0 +1,100 @@
+---
+title: "Presentation Exercise 1"
+author: 
+  - name:  "Alex Paliouras"
+    orcid: "0009-0002-9266-6805"
+    email: "a.paliouras@students.uu.nl"
+    affiliations:
+    - name: "Methodology, Statistics & Data Science"
+    - name: "Utrecht University"
+    
+date: today
+date-format: "D MMMM YYYY"
+
+format: 
+  revealjs:
+    theme: default
+    footer: "Alex Paliouras - Markup Languages Quarto Week 2"
+    scrollable: TRUE 
+    smaller: true
+    width: 1600
+    height: 900
+    margin: 0.05
+    
+editor: source
+
+include-in-header:
+  - text: |
+      <style>
+      /* Presentation title */
+      #title-slide .title {
+        font-size: 48px;
+      }
+
+      /* Author name */
+      #title-slide .quarto-title-author-name {
+        font-size: 26px;
+      }
+
+      /* Affiliation */
+      #title-slide .quarto-title-affiliation {
+        font-size: 18px;
+        font-style: italic;
+      }
+
+      /* Email */
+      #title-slide .quarto-title-author-email {
+        font-size: 16px;
+        font-style: normal;
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }
+
+      /* Date */
+      #title-slide .date {
+        font-size: 20px;
+      }
+      </style>
+---
+
+## Favorite Equation
+
+In a social network, nodes represent actors (e.g., individuals), while edges represent interactions between them (e.g., sending messages/signals).
+
+A Relational Event Model (REM) estimates the rate at which each possible sender-receiver pair interacts at a given time, based on previous interactions and specified characteristics.
+
+The event rate is modeled as:
+
+$$\log \lambda(s,r,t) = \sum_{p=1}^{P} \beta_p X_p(s,r,t)$$
+
+and interpreted as a one-unit increase in a statistic ($X_p$) is associated with a relative increase or decrease in the event rate ($\lambda$), depending on the magnitude and direction of its coefficient ($\beta_p$), holding all other statistics constant.
+
+Where:
+
+- $\lambda(s,r,t)$: Instantaneous event rate between sender $s$ and receiver $r$ at time $t$.
+
+- $X_p(s,r,t)$: Endogenous or exogenous network characteristic describing the $(s,r)$ pair at time $t$.
+
+- $\beta_p$: Model coefficient indicating how statistic $p$ affects the log event rate.
+
+- $P$: Total number of statistics included in the model.
+
+Reference: [Meijernik-Bosman et al. 2022](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0272309)
+
+## About me
+
+::: incremental
+- I was an Economics student before specializing in Psychology and Statistics.
+
+- I'm an avid competitive gamer since 7 years old to this day.
+
+  ::: {style="text-align: center;"}
+  <img src="images/wowlogo.png" width="254"/> <img src="images/hslogo.jpeg" width="162"/> ![](images/Logo_CoD.jpg){width="214"}
+  :::
+
+- When I was younger I participated in competitive sharpshooting.
+
+  ::: {style="text-align: center;"}
+  ![](images/Sharpshooter.jpg){width="255"}
+  :::
+:::
