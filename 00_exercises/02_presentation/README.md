@@ -18,16 +18,12 @@ Ex2_presentation.qmd - Editable Quarto source for the seven-slide network scienc
 
 Ex2_presentation.html — Rendered Exercise 2 slides
 
-karate-network.html — Standalone interactive network visualization embedded into Exercise 2 using an HTML iframe.
+karate-network.html — Standalone interactive network visualization embedded into Exercise 2 using an HTML. Created this to resolve bugs for the interactive figure as mouse-hovering was not working properly.
 
-karate-network_files/ — JavaScript and CSS dependencies required for the interactive network visualization for exercise 2.
+karate-network_files/ — JavaScript and CSS dependencies required for the interactive network visualization for exercise 2 to work correctly when rendering.
 
 references.bib — BibTeX file containing the academic references used in Exercise 2.
 
-Images/ — Shared images and logos used by both presentations.
+Images — Shared images and logos used by both presentations.
 
-renv/ — Contains the configuration and activation files for the reproducible R environment.
-
-renv.lock — Records the R version and package dependencies required to reproduce the environment using renv::restore().
-
-.Rprofile — Automatically activates the project's renv environment when opening the project in R.
+renv - reproducible environment folder for exercise 2
