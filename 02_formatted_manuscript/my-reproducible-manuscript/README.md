@@ -28,8 +28,6 @@ docs:
 - my-reproducible-manuscript.qmd = source quarto markdown file of exercise 1.
 - references_reproducible_manuscript.bib = bibtex file with references used in qmd.
 
-results: empty folder can be used for storing result output files.
-
 scripts: do_addition function for number addition and dummy code to be used in the exercise in both R and python script formats. 
 
 
