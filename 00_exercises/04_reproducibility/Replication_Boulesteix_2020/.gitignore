@@ -1,0 +1,12 @@
+# Exclude locally installed packages and temporary renv files.
+/renv/library/
+/renv/staging/
+
+# Exclude R session history and temporary files.
+.Rhistory
+.RData
+.Rproj.user/
+
+# Exclude Quarto execution caches.
+**/*_cache/
+.quarto/

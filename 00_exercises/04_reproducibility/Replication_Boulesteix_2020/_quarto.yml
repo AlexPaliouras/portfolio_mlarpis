@@ -1,0 +1,6 @@
+project:
+  type: default
+  execute-dir: project
+  
+link-bibliography: true
+link-citations: true
