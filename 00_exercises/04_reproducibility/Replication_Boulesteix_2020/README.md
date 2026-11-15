@@ -42,7 +42,6 @@ Contains the Quarto source document, its rendered HTML report, and bibliography 
 - `Replication_Boulesteix2020.html` – Rendered HTML version of the report.
 - `Replication_Boulesteix2020.pdf` – Rendered PDF version of the reproducible Quarto report.
 - `references_BoulesteixRep.bib` – Contains references cited in the report.
-- `Replication_Boulesteix2020_cache/` – Quarto-generated cache storing previously executed computations, particularly the simulation results, to avoid unnecessary recomputation during rendering.
 - `Replication_Boulesteix2020_files/` – Automatically generated directory containing figures and supporting files required by the rendered Quarto report.
 
 
