@@ -15,6 +15,8 @@ Date: 04/11/26
 Course: Markup Languages and Reproducible Programming in Statistics - Week 4 Reproducibility
 
 # Files and Folders
+my-reproducible-manuscript.Rproj = RStudio project file.
+
 _quarto.yml = text file with extra yaml setup for quarto script working directory to be able to parse any file in the project without having to specify specific folder working directories for different code chunks
 
 data = contains data.csv dataset with penguin data from palmerpenguins package (https://allisonhorst.github.io/palmerpenguins/)
