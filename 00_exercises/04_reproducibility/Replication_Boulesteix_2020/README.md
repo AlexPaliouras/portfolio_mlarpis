@@ -28,11 +28,11 @@ The project reproduces the original simulation using a standalone R function, ve
 
 Contains the original NHANES 2015–2016 datasets obtained from the [CDC NHANES website](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2015).
 
-- `DEMO_I.xpt` – Demographic characteristics, including age and sex.
-- `BPX_I.xpt` – Blood pressure measurements.
-- `BMX_I.xpt` – Body measurements, including BMI.
-- `GHB_I.xpt` – Glycohemoglobin (HbA1c) measurements.
-- `TCHOL_I.xpt` – Total cholesterol measurements.
+- `DEMO_I.XPT` – Demographic characteristics, including age and sex.
+- `BPX_I.XPT` – Blood pressure measurements.
+- `BMX_I.XPT` – Body measurements, including BMI.
+- `GHB_I.XPT` – Glycohemoglobin (HbA1c) measurements.
+- `TCHOL_I.XPT` – Total cholesterol measurements.
 
 ### `docs/`
 
